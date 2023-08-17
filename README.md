@@ -32,6 +32,21 @@ Servers that permit SGD2FreeRes:
 - [Project Diablo 2](https://www.projectdiablo2.com/): 640x480, 800x600, 856x480, 1068x600
 - And more...
 
+## Building
+
+Follow the steps below to build the project using Visual Studio. Working knowledge of Git and command-line usage is required.
+
+1. Download and install [Visual Studio](https://visualstudio.microsoft.com/vs/) or [Build Tools for Visual Studio](https://visualstudio.microsoft.com/downloads/). Building has been tested and known to work with Visual Studio 17 2022. Make sure to install C++ support when installing VS.
+2. Download and install [CMake](https://cmake.org).
+3. Make sure CMake is on your path (may need to edit system environment variables).
+4. Clone this repo.
+5. `cd` to the cloned directory.
+6. Initialize the submodules with `git submodule update --init --recursive`.
+7. Run `cmake -G "Visual Studio 17 2022" -A Win32 -B build`
+8. Run `cmake --build build --config Release`
+
+This process will create a Visual Studio solution in the `build` directory at step 7. You can also choose to open this in the Visual Studio IDE for editing and bulding purposes.
+
 ## Contribution
 SGD2FreeRes is coded in C++20. It currently is intended to compile with Visual Studio 2022.
 
